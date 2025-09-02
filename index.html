@@ -1,156 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amazon Clone</title>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preload" as="image" href="public/image_1.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Preload Hero Image -->
+  <link rel="preload" as="image" href="public/image_1.jpg" />
+
+  <!-- JavaScript -->
   <script src="script.js" defer></script>
 </head>
-
 <body>
 
-
-  <div class="navbar">
-    <div class="nav-logo border"></div>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-logo border" aria-label="Amazon Logo"></div>
 
     <div class="nav-address border">
       <p>Deliver to</p>
       <div class="add-icon">
-        <i class="fas fa-map-marker-alt"></i>
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
         <span>India</span>
       </div>
     </div>
 
     <div class="nav-search">
-      <select class="search-select">
+      <select class="search-select" aria-label="Search Category">
+        
         <option>All</option>
       </select>
+      <input type="text" class="search-input" placeholder="Search Amazon" aria-label="Search Input" />
+      <button class="search-icon" onclick="handleSearch()">🔍</button>
 
-      <input type="text" class="search-input" placeholder="Search Amazon" />
-      <div class="search-icon" onclick="handleSearch()">🔍</div>
-      <button onclick="toggleDarkMode()" class="dark-mode-btn">🌙 Dark Mode</button>
+
+
+      
+      
+      <button onclick="toggleDarkMode()" class="dark-mode-btn" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
     </div>
 
-    <div class="nav-cart border">
-      🛒
-      <p>Cart</p>
+    <div class="nav-cart border" aria-label="Shopping Cart">
+      🛒 <p>Cart</p>
     </div>
-  </div>
+  </header>
 
- 
-  <div class="panel">
+  <!-- Panel Section -->
+  <nav class="panel">
     <div class="panel-ops">
-      <p class="border" onclick="openDealsPage()">Today's Deals</p>
-      <p class="border">Customer Service</p>
-      <p class="border">Registry</p>
-      <p class="border">Gift Cards</p>
-      <p class="border">Sell</p>
+      <p class="border"><a href="today.html">Today's Deals</a></p>
+      <p class="border"><a href="#">Customer Service</a></p>
+      <p class="border"><a href="#">Registry</a></p>
+      <p class="border"><a href="#">Gift Cards</a></p>
+      <p class="border"><a href="#">Sell</a></p>
     </div>
-    <div class="panel-deals">
-      Shop Deals in Electronics
-    </div>
-  </div>
+    <div class="panel-deals">Shop Deals in Electronics</div>
+  </nav>
 
+  <!-- Hero Carousel -->
+  <section class="hero-carousel" aria-label="Hero Carousel">
+    <img src="public/image_27.jpg" class="carousel-img" alt="Hero Image 1" />
+    <img src="public/image_28.jpg" class="carousel-img" alt="Hero Image 2" />
+    <img src="public/image_29.jpg" class="carousel-img" alt="Hero Image 3" />
+  </section>
 
-  <div class="hero-carousel">
-    <img src="public/image_27.jpg" class="carousel-img" alt="Hero Image"/>
-    <img src="public/image_28.jpg" class="carousel-img"alt="Hero Image" />
-    <img src="public/image_29.jpg" class="carousel-img"alt="Hero Image" />
-  </div>
-
-  
-  <div class="hero-section">
+  <!-- Hero Welcome -->
+  <section class="hero-section">
     <h1>Welcome to Amazon</h1>
-  </div>
+  </section>
 
-  <div class="shop-section">
-    <div class="box"><h3>Clothes</h3>
-    <div class="box-img" style="background-image: url('public/image_1.jpg');">
-   </div><p>See more</p></div>
+  <!-- Shop Section -->
+  <main class="shop-section">
+    <!-- Product Boxes -->
+    <!-- You can loop these dynamically with JS later -->
+    <div class="box"><h3>Clothes</h3><div class="box-img" style="background-image: url('public/image_1.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Electronics</h3><div class="box-img" style="background-image: url('public/image_2jpg.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Home & Kitchen</h3><div class="box-img" style="background-image: url('public/image_3.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Beauty Products</h3><div class="box-img" style="background-image: url('public/image_4.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Books</h3><div class="box-img" style="background-image: url('public/image_5.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Fitness Gear</h3><div class="box-img" style="background-image: url('public/image_6.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Toys & Games</h3><div class="box-img" style="background-image: url('public/image_7.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Groceries</h3><div class="box-img" style="background-image: url('public/image_8.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Washing Machine</h3><div class="box-img" style="background-image: url('public/image_9.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Prize</h3><div class="box-img" style="background-image: url('public/image_10.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Double Bed ki Chadar</h3><div class="box-img" style="background-image: url('public/image_11.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Table Saman</h3><div class="box-img" style="background-image: url('public/image_12.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>A.C Cooling</h3><div class="box-img" style="background-image: url('public/image_13.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>TV Show</h3><div class="box-img" style="background-image: url('public/image_14.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>LED Show</h3><div class="box-img" style="background-image: url('public/image_15.jpg');"></div><p>See more</p></div>
+    <div class="box"><h3>Deer</h3><div class="box-img" style="background-image: url('public/image_16.jpg');"></div><p>See more</p></div>
+  </main>
 
-    <div class="box"><h3>Electronics</h3>
-    <div class="box-img" style="background-image: url('public/image_2jpg.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>Home & Kitchen</h3>
-    <div class="box-img" style="background-image: url('public/image_3.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>Beauty Products</h3>
-    <div class="box-img" style="background-image: url('public/image_4.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>Books</h3>
-    <div class="box-img" style="background-image: url('public/image_5.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>Fitness Gear</h3>
-    <div class="box-img" style="background-image: url('public/image_6.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>Toys & Games</h3>
-    <div class="box-img" style="background-image: url('public/image_7.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>Groceries</h3>
-    <div class="box-img" style="background-image: url('public/image_8.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>Washing Machine</h3>
-    <div class="box-img" style="background-image: url('public/image_9.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>Prize</h3>
-    <div class="box-img" style="background-image: url('public/image_10.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>Double Bed ki Chadar</h3>
-    <div class="box-img" style="background-image: url('public/image_11.jpg');">
-
-   </div><p>See more</p></div>
-    <div class="box"><h3>Table Saman</h3>
-    <div class="box-img" style="background-image: url('public/image_12.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>A.C Cooling</h3>
-    <div class="box-img" style="background-image: url('public/image_13.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>TV Show</h3>
-    <div class="box-img" style="background-image: url('public/image_14.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>LED Show</h3>
-    <div class="box-img" style="background-image: url('public/image_15.jpg');"></div><p>See more</p></div>
-    
-    <div class="box"><h3>Deer</h3>
-      <div class="box-img" style="background-image: url('public/image_16.jpg');"></div><p>See more</p></div>
-  </div>
-
-  
+  <!-- Footer -->
   <footer>
     <div class="footer-panel1" onclick="scrollToTop()">Back to Top</div>
-
     <div class="footer-panel2">
       <ul>
-      <p>Get to Know Us</p>
-      <a>About Us</a>
-      <a>Careers</a>
-      <a>Press Releases</a>
-    </ul>
-    
-    <ul>
-      <p>Connect with Us</p>
-      <a>Facebook</a><a>Twitter</a>
-      <a>Instagram</a></ul>
-      
-      <ul>
-        <p>Make Money with Us</p>
-        <a>Sell on Amazon</a>
-        <a>Affiliate Program</a>
-        <a>Advertise Your Products</a>
+        <li><strong>Get to Know Us</strong></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press Releases</a></li>
       </ul>
-
       <ul>
-        <p>Let Us Help You</p>
-        <a>Your Account</a>
-        <a>Returns Centre</a>
-        <a>Help</a>
+        <li><strong>Connect with Us</strong></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
       </ul>
-    </div>
-
-    
+      <ul>
+        <li><strong>Make Money with Us</strong></li>
+        <li><a href="#">Sell on Amazon</a></li>
+        <li><a href="#">Affiliate Program</a></li>
+        <li><a href="#">Advertise Your Products</a></li>
+      </ul>
+      <ul>
+        <li><strong>Let Us Help You</strong></li>
+        <li><a href="#">Your Account</a></li>
+        <li><a href="#">Returns Centre</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
     </div>
   </footer>
 
 </body>
 </html>
+
